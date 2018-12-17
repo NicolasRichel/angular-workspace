@@ -16,16 +16,18 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'angular-training'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('angular-training');
-  });
-
-  it('should render title in a h1 tag', () => {
+  it(`should be contained in an 'App' div`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to angular-training!');
+    expect(compiled.querySelector('.App')).toBeTruthy();
+  });
+
+  it(`should render the title 'Angular Training App' in a h1 tag`, () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+    const compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('.App h1')).toBeTruthy();
+    expect(compiled.querySelector('.App h1').textContent).toContain('Angular Training App');
   });
 });

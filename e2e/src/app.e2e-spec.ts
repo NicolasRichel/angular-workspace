@@ -7,8 +7,8 @@ describe('workspace-project App', () => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
+  it('should display main title', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('Welcome to angular-training!');
+    expect(page.getTitleText()).toEqual('Angular Training App');
   });
 });
