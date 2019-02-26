@@ -1,0 +1,9 @@
+.Login {
+  margin: 0;
+  padding-top: 72px;
+  text-align: center;
+}
+
+.Login .login-btn {
+    margin: 32px 0;
+}

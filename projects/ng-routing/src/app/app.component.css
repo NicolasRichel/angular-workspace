@@ -1,0 +1,8 @@
+.App {
+  margin: 0;
+  padding: 16px;
+}
+
+.App .view-container {
+  margin: 16px;
+}
