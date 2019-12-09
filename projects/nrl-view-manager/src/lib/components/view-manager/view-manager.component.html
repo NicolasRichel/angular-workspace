@@ -1,0 +1,18 @@
+<div class="ViewManager">
+  <div class="toolbar">
+    <button
+      *ngFor="let view of views"
+      mat-icon-button
+      [ngClass]="{ 'is-open': view.isOpen }"
+      (click)="openView(view)">
+      <mat-icon>{{ view.icon }}</mat-icon>
+    </button>
+  </div>
+  <div class="box-container">
+    <view-box *ngFor="let view of openedViews"
+      [view]="view"
+      (selected)="takeFocus(view.name)"
+      (close)="closeView(view.name)">
+    </view-box>
+  </div>
+</div>

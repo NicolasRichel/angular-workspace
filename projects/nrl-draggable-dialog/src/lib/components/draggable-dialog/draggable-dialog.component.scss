@@ -1,0 +1,24 @@
+.DraggableDialog {
+  border-radius: 8px;
+  box-shadow: 0 0 8px #666;
+  background-color: #FFF;
+
+  .title {
+    padding: 10px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    font-weight: bold;
+    background-color: #2979FF;
+    color: #FAFAFA;
+  }
+
+  .content {
+    padding: 10px;
+  }
+
+  .actions {
+    padding: 10px;
+    text-align: right;
+  }
+
+}

@@ -1,0 +1,8 @@
+<div class="StepLine">
+  <div class="line"></div>
+  <div *ngFor="let step of steps; index as i"
+    class="step-item" [ngClass]="{ 'active': step.active }">
+    <div class="index"> <div>{{i}}</div> </div>
+    <div class="label" (click)="select(step.label)">{{ step.label }}</div>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<div class="ViewBox"
+  [ngClass]="{ 'has-focus': view.hasFocus }"
+  cdkDrag
+  cdkDragBoundary=".box-container"
+  (click)="selected.emit()"
+  (cdkDragStarted)="selected.emit()">
+
+  <div class="header" cdkDragHandle>
+    <span>{{ view.name }}</span>
+    <button class="btn-close" mat-icon-button (click)="close.emit()">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+
+  <div class="content">
+    <ng-template [cdkPortalOutlet]="view.componentPortal"></ng-template>
+  </div>
+
+</div>

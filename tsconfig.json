@@ -17,6 +17,32 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "nrl-draggable-dialog": [
+        "dist/nrl-draggable-dialog"
+      ],
+      "nrl-draggable-dialog/*": [
+        "dist/nrl-draggable-dialog/*"
+      ],
+      "nrl-resizable-box": [
+        "dist/nrl-resizable-box"
+      ],
+      "nrl-resizable-box/*": [
+        "dist/nrl-resizable-box/*"
+      ],
+      "nrl-view-manager": [
+        "dist/nrl-view-manager"
+      ],
+      "nrl-view-manager/*": [
+        "dist/nrl-view-manager/*"
+      ],
+      "nrl-ui-components": [
+        "dist/nrl-ui-components"
+      ],
+      "nrl-ui-components/*": [
+        "dist/nrl-ui-components/*"
+      ]
+    }
   }
 }

@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import '~@angular/cdk/overlay-prebuilt.css';
+
+
+html, body {
+  height: 100vh;
+  margin: 0; 
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

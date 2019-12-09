@@ -1,0 +1,30 @@
+.ViewManager {
+
+  display: flex;
+  height: 100%;
+  background-color: #EEE;
+
+  .toolbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50px;
+    padding: 8px 0;
+    background-color: #CCC;
+
+    button {
+      margin: 2px 0;
+      &.is-open {
+        background-color: #BBB;
+      }
+    }
+  }
+
+  .box-container {
+    position: relative;
+    width: calc( 100% - 60px );
+    height: calc( 100% - 10px );
+    margin: 5px;
+  }
+
+}

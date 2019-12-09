@@ -1,0 +1,19 @@
+.App {
+  height: 100%;
+
+  .header {
+    padding: 10px 0;
+    background-color: #EEE;
+    h1 {
+      margin: 0;
+      text-align: center;
+    }
+  }
+
+  .body {
+    position: relative;
+    height: calc( 100% - 103px );
+    padding: 20px;
+  }
+
+}

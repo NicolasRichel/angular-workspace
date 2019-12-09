@@ -1,0 +1,60 @@
+.StepLine {
+  position: absolute;
+  left: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+
+  .line {
+    position: absolute;
+    top: 0;
+    left: 21px;
+    z-index: -1;
+    width: 4px;
+    height: 100%;
+    background-color: #000;
+  }
+
+  .step-item {
+    position: relative;
+    padding: 10px 0;
+
+    &.active {
+      padding: 30px 0;
+      .index {
+        transform: scale(1.3);
+      }
+      .label {
+        margin-left: 18px;
+        font-weight: bold;
+      }
+    }
+
+    .index {
+      display: inline-block;
+      width: 38px;
+      height: 38px;
+      border: 4px solid #000;
+      border-radius: 50%;
+      & > div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+        border: 4px solid #FFF;
+        border-radius: 50%;
+        font-weight: bold;
+        background-color: #000;
+        color: #FFF;
+      }
+    }
+
+    .label {
+      display: inline-block;
+      margin-left: 10px;
+    }
+
+  }
+
+}

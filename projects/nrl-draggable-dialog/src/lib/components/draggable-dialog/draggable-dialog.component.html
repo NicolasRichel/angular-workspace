@@ -1,0 +1,11 @@
+<div class="DraggableDialog" cdkDrag>
+  <div class="title" cdkDragHandle>
+    {{ data.title }}
+  </div>
+  <div class="content">
+    <ng-template nrlDraggableDialogContent></ng-template>
+  </div>
+  <div class="actions">
+    <button mat-raised-button (click)="close()">Close</button>
+  </div>
+</div>
