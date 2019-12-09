@@ -7,7 +7,7 @@ import { Component, Input } from '@angular/core';
   templateUrl: './view-manager.component.html',
   styleUrls: ['./view-manager.component.scss']
 })
-export class ViewManagerComponent {
+export class NrlViewManagerComponent {
 
   @Input() views: any[];
 

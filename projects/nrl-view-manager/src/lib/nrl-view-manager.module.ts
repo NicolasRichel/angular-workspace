@@ -8,14 +8,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // Components
-import { ViewBoxComponent } from './components/view-box/view-box.component';
-import { ViewManagerComponent } from './components/view-manager/view-manager.component';
+import { NrlViewBoxComponent } from './components/view-box/view-box.component';
+import { NrlViewManagerComponent } from './components/view-manager/view-manager.component';
 
 
 @NgModule({
   declarations: [
-    ViewBoxComponent,
-    ViewManagerComponent,
+    NrlViewBoxComponent,
+    NrlViewManagerComponent,
   ],
   imports: [
     BrowserAnimationsModule,
@@ -26,8 +26,8 @@ import { ViewManagerComponent } from './components/view-manager/view-manager.com
     PortalModule,
   ],
   exports: [
-    ViewBoxComponent,
-    ViewManagerComponent,
+    NrlViewBoxComponent,
+    NrlViewManagerComponent,
   ]
 })
 export class NrlViewManagerModule {}

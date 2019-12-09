@@ -20,7 +20,7 @@ export class DraggableDialogComponent implements OnInit {
   @Input() data: DraggableDialogData;
   @Input() component: Type<any>;
 
-  @ViewChild(DraggableDialogContentDirective)
+  @ViewChild(DraggableDialogContentDirective, { static: true })
   dialogContent: DraggableDialogContentDirective;
 
   constructor(

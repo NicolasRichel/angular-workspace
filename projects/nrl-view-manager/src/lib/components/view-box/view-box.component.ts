@@ -6,7 +6,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   templateUrl: './view-box.component.html',
   styleUrls: ['./view-box.component.scss']
 })
-export class ViewBoxComponent {
+export class NrlViewBoxComponent {
 
   @Input() view: any;
 
