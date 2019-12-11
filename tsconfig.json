@@ -32,17 +32,17 @@
       "nrl-resizable-box/*": [
         "dist/nrl-resizable-box/*"
       ],
-      "nrl-view-manager": [
-        "dist/nrl-view-manager"
-      ],
-      "nrl-view-manager/*": [
-        "dist/nrl-view-manager/*"
-      ],
       "nrl-ui-components": [
         "dist/nrl-ui-components"
       ],
       "nrl-ui-components/*": [
         "dist/nrl-ui-components/*"
+      ],
+      "nrl-view-manager": [
+        "dist/nrl-view-manager"
+      ],
+      "nrl-view-manager/*": [
+        "dist/nrl-view-manager/*"
       ]
     }
   }

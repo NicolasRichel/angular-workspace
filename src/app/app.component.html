@@ -1,10 +1,20 @@
 <div class="App">
   <div class="header">
-    <h1>Angular Training App</h1>
+    <h1>[Angular Workspace] Reference App</h1>
   </div>
   <div class="body">
 
-    <!-- TODO : build example app interface -->
+    <mat-sidenav-container>
+      <mat-sidenav mode="side" opened>
+        <div *ngFor="let example of examples" (click)="selectedExample = example"
+          class="example-entry">
+          {{ example }}
+        </div>
+      </mat-sidenav>
+      <mat-sidenav-content>
+        <example-container [example]="selectedExample"></example-container>
+      </mat-sidenav-content>
+    </mat-sidenav-container>
 
   </div>
 </div>

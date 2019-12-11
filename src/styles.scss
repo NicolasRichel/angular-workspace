@@ -4,6 +4,10 @@
 @import '~@angular/cdk/overlay-prebuilt.css';
 
 
+* {
+  box-sizing: border-box;
+}
+
 html, body {
   height: 100vh;
   margin: 0; 

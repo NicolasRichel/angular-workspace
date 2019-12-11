@@ -1,19 +1,34 @@
+@import 'app-colors';
+
+
 .App {
   height: 100%;
 
   .header {
-    padding: 10px 0;
-    background-color: #EEE;
+    padding: 10px;
+    background-color: $gallery;
+    border-bottom: 1px solid $alto;
     h1 {
       margin: 0;
-      text-align: center;
+      font-size: 22px;
+      color: $tundora;
     }
   }
 
   .body {
-    position: relative;
-    height: calc( 100% - 103px );
-    padding: 20px;
+    height: calc( 100% - 50px );
+    .mat-sidenav-container {
+      height: 100%;
+      .mat-sidenav {
+        .example-entry {
+          cursor: pointer;
+          padding: 10px;
+          &:hover {
+            background-color: $gallery;
+          }
+        }
+      }
+    }
   }
 
 }

@@ -12,18 +12,16 @@ import { TodoListComponent } from './todo-list/todo-list.component';
 })
 export class ViewManagerExampleComponent {
 
-  iews: any[] = [
+  views: any[] = [
     {
       name: 'hello',
       icon: 'favorite',
-      component: HelloWorldComponent,
-      isOpen: false
+      component: HelloWorldComponent
     },
     {
       name: 'todo',
       icon: 'format_list_bulleted',
-      component: TodoListComponent,
-      isOpen: false
+      component: TodoListComponent
     }
   ];
 

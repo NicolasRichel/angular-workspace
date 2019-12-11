@@ -1,4 +1,4 @@
-import { Component, ComponentFactoryResolver, Input, ViewChild, OnInit, Type } from '@angular/core';
+import { Component, ComponentFactoryResolver, Input, OnInit, Type, ViewChild } from '@angular/core';
 
 // Models
 import { DraggableDialogData } from '../../models/draggable-dialog-data.interface';
