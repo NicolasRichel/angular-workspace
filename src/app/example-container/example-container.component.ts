@@ -1,4 +1,4 @@
-import { Component, OnChanges, Input, SimpleChanges } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges, ViewEncapsulation } from '@angular/core';
 import { ComponentPortal } from '@angular/cdk/portal';
 import { EXAMPLES } from '../examples/examples';
 
@@ -6,7 +6,8 @@ import { EXAMPLES } from '../examples/examples';
 @Component({
   selector: 'example-container',
   templateUrl: './example-container.component.html',
-  styleUrls: ['./example-container.component.scss']
+  styleUrls: ['./example-container.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class ExampleContainerComponent implements OnChanges {
 

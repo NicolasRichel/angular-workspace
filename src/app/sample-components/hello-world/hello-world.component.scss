@@ -1,7 +1,10 @@
+@import 'app-colors';
+
+
 .HelloWorld {
 
   text-align: center;
   font-size: 24px;
-  color: red;
+  color: $red;
 
 }

@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 // Components
-import { HelloWorldComponent } from './hello-world/hello-world.component';
-import { TodoListComponent } from './todo-list/todo-list.component';
+import { HelloWorldComponent } from '../../sample-components/hello-world/hello-world.component';
+import { TodoListComponent } from '../../sample-components/todo-list/todo-list.component';
 
 
 @Component({

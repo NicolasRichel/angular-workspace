@@ -1,0 +1,16 @@
+@import 'app-colors';
+
+
+.Example {
+  padding: 10px;
+
+  .title {
+    margin-bottom: 10px;
+    padding-bottom: 4px;
+    border-bottom: 4px solid $alto;
+    font-size: 18px;
+    font-weight: bold;
+    color: $tundora;
+  }
+
+}
