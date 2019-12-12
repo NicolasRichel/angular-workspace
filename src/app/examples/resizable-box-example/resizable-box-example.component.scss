@@ -1,0 +1,17 @@
+@import 'app-colors';
+
+
+.content {
+  padding: 30px;
+
+  .box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border: 2px solid $tundora;
+    background-color: $silver;
+  }
+
+}

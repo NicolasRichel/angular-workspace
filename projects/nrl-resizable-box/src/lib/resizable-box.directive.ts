@@ -36,7 +36,9 @@ export class ResizableBoxDirective implements OnInit {
 
   constructor(
     private _element: ElementRef
-  ) {
+  ) {}
+
+  ngOnInit() {
     this._host = this._element.nativeElement;
     const computedStyle = window.getComputedStyle(this._host, null);
     if ( !['absolute', 'relative', 'fixed'].includes(computedStyle.position) ) {
@@ -48,12 +50,9 @@ export class ResizableBoxDirective implements OnInit {
       width: computedStyle.width,
       height: computedStyle.height
     });
-  }
-
-  ngOnInit() {
-    ['minWidth', 'maxWidth', 'minHeight', 'maxHeight'].forEach((prop) => {
-      (this[prop] > 0) && (this._host.style[prop] = this[prop] + 'px');
-    });
+    ['minWidth', 'maxWidth', 'minHeight', 'maxHeight'].forEach(
+      (prop) => (this[prop] > 0) && (this._host.style[prop] = this[prop] + 'px')
+    );
     let array: string[] = [];
     if (this.directions === 'all') {
       array = allDirections;
@@ -66,11 +65,11 @@ export class ResizableBoxDirective implements OnInit {
     } else if (allDirections.includes(this.directions)) {
       array = [this.directions];
     }
-    array.forEach((direction: string) => this._appendGrabber(this._host, direction));
+    array.forEach((direction: string) => this._appendGrabber(direction));
   }
 
 
-  private _appendGrabber(element: HTMLElement, direction: string): void {
+  private _appendGrabber(direction: string): void {
     const grabber: HTMLDivElement = document.createElement('div');
     grabber.classList.add('grabber', direction);
     grabber.style.position = 'absolute';
@@ -143,13 +142,16 @@ export class ResizableBoxDirective implements OnInit {
         (e: any) => s.unsubscribe()
       );
     });
-    element.append(grabber);
+    this._host.append(grabber);
   }
 
 
   private _resizeTop(e: any): void {
     const height = parseInt(this._host.style.height) - e.movementY;
-    if (height >= this.minHeight && height <= this.maxHeight) {
+    if (
+      (!this.minHeight || height >= this.minHeight) &&
+      (!this.maxHeight || height <= this.maxHeight)
+    ) {
       this._host.style.top = parseInt(this._host.style.top) + e.movementY + 'px';
       this._host.style.height = height + 'px';
     }
@@ -165,7 +167,10 @@ export class ResizableBoxDirective implements OnInit {
 
   private _resizeLeft(e: any): void {
     const width = parseInt(this._host.style.width) - e.movementX;
-    if (width >= this.minWidth && width <= this.maxWidth) {
+    if (
+      (!this.minWidth || width >= this.minWidth) &&
+      (!this.maxWidth || width <= this.maxWidth)
+    ) {
       this._host.style.left = parseInt(this._host.style.left) + e.movementX + 'px';
       this._host.style.width = width + 'px';
     }
